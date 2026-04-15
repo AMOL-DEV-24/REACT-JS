@@ -1,119 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+/* eslint-disable no-unused-vars */
+import { PropsDesClass } from "./components/Class Components/PropsDesClass.jsx"
+import PropsDesClass1 from "./components/Class Components/PropsDesClass1.jsx"
+import { PropsObjectDesClass } from "./components/Class Components/PropsObjectDesClass.jsx"
+import PropsDefaultValue from "./components/Functional Components/PropsDefaultValue.jsx"
+import PropsDes from "./components/Functional Components/PropsDes"
+import PropsDes1 from "./components/Functional Components/PropsDes1.jsx"
+import PropsDestructuring from "./components/Functional Components/PropsDestructuring"
 
 function App() {
-  const [count, setCount] = useState(0)
 
+    let a={
+      name: "Amol",
+      age: 24
+    }
+
+    let arr =[1, 2, 3, 4, 5]
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <h1>Props Destructuring</h1>
+      {/*! 1st Way   */}
+      {/* <PropsDestructuring one="ONE" two={a} three={arr}/> */}
+      {/* It created the nested Object using double curly braces {{}} */}
+      {/* <PropsDestructuring one="ONE" two={{a}} three={{arr}}/> */}
+      {/* <PropsDes name="Amol" age={25}/> */}
 
-      <div className="ticks"></div>
+      {/* 2nd Way */}
+      {/* <PropsDes1 name="Amol Pawar" proff="Software Developer"/> */}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* Object Destructuring */}
+      {/* <PropsDesObj name="Amol Pawar" age={25} address="Bhalawani"/> */}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      {/* Props Default Value */}
+      {/* <PropsDefaultValue name="John Doe" age ={30}/> */}
+
+      {/* Propsdestructuring in Class */}
+      {/* <PropsDesClass name="Amol Pawar" age={25} address="Bhalawani"/> */}
+      {/* <PropsDesClass1 name="Amol Pawar" age={25} address="Bhalawani"/> */}
+      <PropsObjectDesClass obj={{name : "Amol Pawar", age: 25, address: "Bhalawani"}}/>
+
+
     </>
   )
 }
