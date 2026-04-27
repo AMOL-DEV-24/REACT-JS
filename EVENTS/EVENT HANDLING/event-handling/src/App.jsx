@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import ClassEventArrow from "./components/Class Components/ClassEventArrow"
+import ClassEventHandling from "./components/Class Components/ClassEventHandling"
+import ClassMethodCall from "./components/Class Components/ClassMethodCall"
 import ArrowEventHandler from "./components/Functional Components/ArrowFunction"
 import FunctionClick from "./components/Functional Components/FunctionaClick"
 import FunctionCall from "./components/Functional Components/FunctionCall"
@@ -23,7 +25,10 @@ function App() {
       {/* <ArrowEventHandler/> */}
 
       {/*2.In The Class Component */}
-      <ClassEventArrow/>
+      {/* <ClassEventArrow/> */}
+
+      {/* <ClassEventHandling/> */}
+      <ClassMethodCall/>
 
 
     </>

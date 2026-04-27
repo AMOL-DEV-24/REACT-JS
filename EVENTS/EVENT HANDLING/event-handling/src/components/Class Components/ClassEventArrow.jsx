@@ -12,7 +12,10 @@ export default class ClassEventArrow extends Component{
     render(){
         return(
             <div>
-                <button onClick={()=>this.ClickHandler}>Click</button>
+                {/* 1.You Can Pass The Method Reference  */}
+                {/* <button onClick={()=>this.ClickHandler}>Click</button> */}
+                {/* 2.You can Method call as well in the Arrow  */}
+                <button onClick={()=>this.ClickHandler()}>Click</button>
             </div>
         )
     }
